@@ -128,7 +128,6 @@ header .icons #menu-bars {
 }
 
 
-
   
 #search-form {
     position: fixed;
@@ -229,7 +228,6 @@ header .icons #menu-bars {
   }
 
   
-
   
 .dishes .box-container {
     display: grid;
@@ -308,8 +306,6 @@ header .icons #menu-bars {
     margin-right: 1rem;
     font-size: 2.5rem;
   }
-
-
 
 
 
@@ -554,19 +550,6 @@ header .icons #menu-bars {
     margin-top: 0;
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   
 .footer .box-container {
     display: grid;
@@ -606,3 +589,135 @@ header .icons #menu-bars {
     color: var(--green);
   }
 
+
+  
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+
+.footer .box-container .box h3 {
+  padding: 0.5rem 0;
+  font-size: 2.5rem;
+  color: var(--black);
+}
+
+.footer .box-container .box a {
+  display: block;
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+  color: var(--light-color);
+}
+
+.footer .box-container .box a:hover {
+  color: var(--green);
+  text-decoration: underline;
+}
+
+.footer .credit {
+  text-align: center;
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+  font-size: 2rem;
+  color: var(--black);
+  padding: 0.5rem;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.footer .credit span {
+  color: var(--green);
+}
+
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10000;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.loader-container img {
+  width: 35rem;
+}
+
+.loader-container.fade-out {
+  top: -110%;
+  opacity: 0;
+}
+
+/* media queries  */
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  header {
+    padding: 1rem 2rem;
+  }
+
+  section {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header .icons #menu-bars {
+    display: inline-block;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  header .navbar a {
+    display: block;
+    padding: 1.5rem;
+    margin: 1rem;
+    font-size: 2rem;
+    background: #eee;
+  }
+
+  #search-form #search-box {
+    width: 90%;
+    margin: 0 1rem;
+  }
+
+  .home .home-slider .slide .content h3 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .dishes .box-container .box img {
+    height: auto;
+    width: 100%;
+  }
+
+  .order form .inputBox .input {
+    width: 100%;
+  }
+}
